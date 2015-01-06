@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EBB473FED3D259F54222F88 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 149FAB1AA83B271C7F29B41F /* libPods.a */; };
 		685A2C1E1A5BABDB00BE2123 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 685A2C1D1A5BABDB00BE2123 /* main.m */; };
 		685A2C211A5BABDB00BE2123 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 685A2C201A5BABDB00BE2123 /* AppDelegate.m */; };
 		685A2C241A5BABDB00BE2123 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 685A2C231A5BABDB00BE2123 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		149FAB1AA83B271C7F29B41F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		57DA8A01ABC6123103C911E6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		685A2C181A5BABDB00BE2123 /* SignalCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignalCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		685A2C1C1A5BABDB00BE2123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		685A2C1D1A5BABDB00BE2123 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		685A2C311A5BABDB00BE2123 /* SignalCastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignalCastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		685A2C361A5BABDB00BE2123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		685A2C371A5BABDB00BE2123 /* SignalCastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignalCastTests.m; sourceTree = "<group>"; };
+		696A0EEC390455EF405D37AB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EBB473FED3D259F54222F88 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 				685A2C1A1A5BABDB00BE2123 /* SignalCast */,
 				685A2C341A5BABDB00BE2123 /* SignalCastTests */,
 				685A2C191A5BABDB00BE2123 /* Products */,
+				6D7FD0CC9887BAAAF226A033 /* Pods */,
+				8104A4A0E1B51F321F24BA14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +126,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6D7FD0CC9887BAAAF226A033 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				696A0EEC390455EF405D37AB /* Pods.debug.xcconfig */,
+				57DA8A01ABC6123103C911E6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8104A4A0E1B51F321F24BA14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				149FAB1AA83B271C7F29B41F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 685A2C3B1A5BABDB00BE2123 /* Build configuration list for PBXNativeTarget "SignalCast" */;
 			buildPhases = (
+				9C9863E45E9C58C0DFF4602B /* Check Pods Manifest.lock */,
 				685A2C141A5BABDB00BE2123 /* Sources */,
 				685A2C151A5BABDB00BE2123 /* Frameworks */,
 				685A2C161A5BABDB00BE2123 /* Resources */,
+				F1564808BF15836F7A8502DC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C9863E45E9C58C0DFF4602B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F1564808BF15836F7A8502DC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		685A2C141A5BABDB00BE2123 /* Sources */ = {
@@ -343,6 +402,7 @@
 		};
 		685A2C3C1A5BABDB00BE2123 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 696A0EEC390455EF405D37AB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SignalCast/Info.plist;
@@ -353,6 +413,7 @@
 		};
 		685A2C3D1A5BABDB00BE2123 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57DA8A01ABC6123103C911E6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SignalCast/Info.plist;
@@ -414,6 +475,7 @@
 				685A2C3D1A5BABDB00BE2123 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		685A2C3E1A5BABDB00BE2123 /* Build configuration list for PBXNativeTarget "SignalCastTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +484,7 @@
 				685A2C401A5BABDB00BE2123 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
